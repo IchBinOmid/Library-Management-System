@@ -1,16 +1,23 @@
 # Library Management System
 
-A Python-based library management system built with **Python, Object-Oriented Programming (OOP), and SQLite**.
+A Python-based Library Management System built with **Python and SQLite**.
 
 > 🚧 **Project Status: In Development**
 >
-> This project is currently under active development. More features and improvements will be added as development continues.
+> This project is currently under active development. New features, tests, error handling, and documentation improvements are being added progressively.
 
 ## 📌 About The Project
 
-The Library Management System is a command-line application designed to manage books, users, and borrowing records in a library.
+The Library Management System is a command-line application designed to manage books, users, and borrowing records.
 
-The main purpose of this project is to practice and demonstrate Python programming, object-oriented programming, database management with SQLite, exception handling, and software testing through a practical project.
+The project is being developed as a practical Python portfolio project to strengthen skills in:
+
+* Python programming
+* SQL and SQLite
+* Database design
+* Software testing
+* Exception handling
+* Git and GitHub
 
 ## ✨ Current Features
 
@@ -30,6 +37,22 @@ The main purpose of this project is to practice and demonstrate Python programmi
 * List all users
 * Search for users
 
+### 📖 Borrowing Management
+
+* Borrow books
+* Prevent borrowing an already borrowed book
+* Check whether a book exists before borrowing
+* Check whether a user exists before borrowing
+* Return books
+* Track borrowing and return dates
+
+### 💰 Late Fee Calculation
+
+* Calculate overdue days
+* Calculate late fees based on the number of overdue days
+* Configurable allowed borrowing period
+* Configurable fine per late day
+
 ### 🗄️ Database
 
 The project uses **SQLite** for data storage.
@@ -40,18 +63,24 @@ Current database tables:
 * `users`
 * `borrowings`
 
-### 🧪 Testing
+The `borrowings` table uses foreign keys to connect users and books with borrowing records.
 
-The project includes automated tests using Python's built-in `unittest` framework.
+## 🧪 Testing
 
-The tests currently cover the implemented Book Management and User Management features.
+The project uses Python's built-in **unittest** framework.
 
-Tests use an in-memory SQLite database (`:memory:`) to keep the test environment separate from the project's main database.
+Current automated tests cover:
+
+* Book Management
+* User Management
+
+Tests use an in-memory SQLite database (`:memory:`) to keep the test environment isolated from the main database.
+
+Additional tests for Borrowing, Returning, and Late Fee Calculation are planned.
 
 ## 🛠️ Technologies & Skills
 
 * Python
-* Object-Oriented Programming (OOP)
 * SQLite
 * SQL
 * `sqlite3`
@@ -70,25 +99,6 @@ Library-Management-System/
 ```
 
 > Database files such as `library.db` and test database files are excluded from Git using `.gitignore`.
-
-## 🚧 Planned Features
-
-The following features are planned for the next development stages:
-
-* Borrowing Management
-
-  * Borrow books
-  * Prevent borrowing an already borrowed book
-  * Return books
-  * Track borrowing and return dates
-
-* Late Fee Calculation
-
-* Improved Error Handling
-
-* Additional Testing
-
-* Final documentation and project improvements
 
 ## ▶️ How To Run
 
@@ -150,9 +160,11 @@ python -m unittest test_main.py
 * [x] Database Design
 * [x] Book Management
 * [x] User Management
-* [ ] Borrowing Management
-* [ ] Late Fee Calculation
-* [ ] Error Handling & Additional Testing
+* [x] Borrowing Management
+* [x] Book Return
+* [x] Late Fee Calculation
+* [ ] Borrowing & Return Tests
+* [ ] Improved Error Handling
 * [ ] Final Documentation
 
 ---
